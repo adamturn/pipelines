@@ -136,7 +136,7 @@ class Loader(object):
     def write_to_db(self):
         """Sends the extracted data to a table in our database.
 
-        Accomplishes this at ~maximum~ speed by dynamically generating a shell script that copies data
+        Accomplishes this with ~maximum~ efficiency by dynamically generating a shell script that copies data
         from the extracted .csv files to a Postgres temp table. Data types and column names are corrected
         before appending the temp table to the table in production.
         """
