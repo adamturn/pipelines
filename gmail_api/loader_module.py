@@ -111,12 +111,12 @@ class Loader(object):
         Then we decode the data, unzip the file, and extract the .csv files.
         All internal .csv files appear to be named the same thing.
         To counter this: upon extraction, each file is immediately renamed to the first 10
-        chars of its 'data_id' followed by the current datetime.now()
-        to ensure that the files don't write over each other.
+        chars of its 'data_id' underscore joined with str(datetime.now())
+        which ensures that the files don't write over each other.
 
         Args:
             data: encoded file data
-            data_id (str): id uniquely associated with the accompanying data parameter
+            data_id (str): id uniquely associated with the accompanying data argument
         """
         print("Beginning decoding and extraction process for: {}".format(data_id[:10]))
         print("{}> Decoding data...".format(' '*2))
