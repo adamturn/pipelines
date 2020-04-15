@@ -111,7 +111,7 @@ class Loader(object):
         Then we decode the data, unzip the file, and extract the .csv files.
         All internal .csv files appear to be named the same thing.
         To counter this: upon extraction, each file is immediately renamed to the first 10
-        digits of its 'data_id' followed by the current datetime.now()
+        chars of its 'data_id' followed by the current datetime.now()
         to ensure that the files don't write over each other.
 
         Args:
