@@ -68,7 +68,7 @@ class Loader(object):
     def quickstart_authentication(self):
         """Securely connect to the Gmail account.
 
-        Contains boilerplate code taken from the Gmail API quickstart.
+        Contains modified boilerplate code from the Gmail API quickstart.
         """
         print("Gmail account authentication in progress...")
         creds = None
