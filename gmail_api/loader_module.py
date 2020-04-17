@@ -35,16 +35,16 @@ class Loader(object):
     """
 
     def __init__(self, temp_dir):
-        """
-        If Loader.scopes are modified, Loader.creds becomes invalid.
-            If you must do this, first delete the local file 'token.pickle'.
-            Then uncomment the relevant code in Loader.quickstart_authentication().
-                ctrl-F: 'creds.invalid'
-            You will be asked to authenticate by logging in to Gmail via Chrome.
-            This will not work on a server so you will either need to do this by running this script locally
-            or by getting a different credentials.json from the Gmail API quickstart.
+        """If Loader.scopes are modified, Loader.creds becomes invalid.
 
-        Args:
+        If you must do this, first delete the local file 'token.pickle'.
+        Then uncomment the relevant code in Loader.quickstart_authentication().
+            ctrl-F: 'creds.invalid'
+        You will be asked to authenticate by logging in to Gmail via Chrome.
+        This will not work on a server so you will either need to do this by running this script locally
+        or by getting a different credentials.json from the Gmail API quickstart.
+
+        Arguments:
             temp_dir (str): passed from Loader.construct() class method.
         """
         self.scopes = ['https://www.googleapis.com/auth/gmail.readonly']
@@ -120,9 +120,9 @@ class Loader(object):
         first 10 digits of its 'data_id' followed by the current datetime.now()
         to ensure that the files don't write over each other.
 
-        Args:
+        Arguments:
             data: encoded file data
-            data_id (str): id uniquely associated with the accompanying data parameter
+            data_id (str): id uniquely associated with accompanying data
         """
         print("Beginning decoding and extraction process for: {}".format(data_id[:10]))
         print("{}> Decoding data...".format(' '*2))
